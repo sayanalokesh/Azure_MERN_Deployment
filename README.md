@@ -38,18 +38,13 @@ After successful installation
 
 ![image](https://github.com/AdarshIITDH/MERN-deployment-on-AKS/assets/60352729/85b452d5-3f26-497f-a432-dd371614139f)
 
-
-
-
-
-
 ### Creating the resource group
- - In the Azure Portal, click on “Create a resource” from the left-hand menu.
- - Search for “Resource group” and select “Resource group” from the results.
- - Click the “Create” button.
- - Enter a unique name for your resource group, such as “microservice_deployment”
- - Choose a region for the resource group (e.g., East US).
- - Click the “Review + Create” button and then click “Create” to create the resource group.
+ - Go to the Azure Portal and click on "Create a resource" in the menu on the left.
+ - Look for "Resource group" and choose it from the search results.
+ - Press the "Create" button.
+ - Provide a name that hasn't been used before for your resource group, like "microservice_deployment".
+ - Select a region where you want your resource group to be located, such as East US.
+ - Click on "Review + Create" and then hit "Create" to finalize creating the resource group.
 
 ![image](https://github.com/AdarshIITDH/MERN-deployment-on-AKS/assets/60352729/12ca557c-61e3-44e1-bb72-26bc8c54735e)
 
@@ -63,18 +58,17 @@ After successful installation
 
 ### Basics
  - In the “Basics” tab of the AKS creation wizard:
- - Choose your Azure subscription.
- - Select the resource group created before (“microservice_deployment”).
- - Enter a unique name for your AKS cluster (e.g., “Mern_Deployment”).
- - Choose the region for your AKS cluster (e.g., East US).
- - Select the desired Kubernetes version (e.g., 1.26.6).
- - For practice purposes and development/testing tasks, select a cluster preset configuration that suits your needs, such as “Dev/Test.”
- - This preset can provide you with predefined configurations optimized for these scenarios.
- - Specify the availability zones where your cluster nodes will be placed for increased resiliency.
- - AKS offers two pricing tiers for the managed Kubernetes control plane. Choose the pricing tier that best meets your needs.
- - Choose an upgrade type to determine when the cluster will be upgraded based on new AKS and Kubernetes releases. (For example, you can choose “Enable with Patch” for recommended automatic upgrades.)
- - For authentication and authorization, you can choose to use local accounts with Kubernetes RBAC. This provides a native Kubernetes RBAC managed locally within your AKS cluster.
- - Click “Next: Node Pools” to proceed.
+ - Pick your Azure subscription.
+ - Choose the resource group you previously made (named "microservice_deployment").
+ - Give your AKS cluster a unique name, like "Mern_Deployment".
+ - Select the region where you want your AKS cluster to be, such as East US.
+ - Pick the version of Kubernetes you want to use, for example, 1.26.6.
+ - If you're practicing or doing development/testing, choose a preset configuration for your cluster, like "Dev/Test", which is optimized for these tasks.
+ - Specify the availability zones where your cluster nodes will be placed for better resilience.
+ - There are two pricing options for the managed Kubernetes control plane. Choose the one that fits your needs.
+ - Decide how you want the cluster to be upgraded when new AKS and Kubernetes versions are released. For instance, you can select "Enable with Patch" for automatic upgrades.
+ - For authentication and authorization, you can opt for using local accounts with Kubernetes RBAC. This means a native Kubernetes RBAC will be managed within your AKS cluster.
+ - Click "Next: Node Pools" to continue.
 
 ![image](https://github.com/AdarshIITDH/MERN-deployment-on-AKS/assets/60352729/f3827960-06d1-494f-9e65-f110a3fe2d23)
 
@@ -82,9 +76,9 @@ After successful installation
 
 ### Node Pool
 
- - You can add or customize node pools based on your application requirements.
- - Define the number of nodes, VM size, and other settings for your node pool.
- - Click “Next: Networking” when you’re ready to proceed.
+ - You can choose to add or change node pools based on the requirements of your applications.
+ - Decide on the number of nodes you need, the size of the virtual machines (VMs), and any other settings required for your node pool.
+ - Once you've finished configuring your node pool, click on "Next: Networking" to proceed.
    
 ![image](https://github.com/AdarshIITDH/MERN-deployment-on-AKS/assets/60352729/eef18acf-9a3b-499a-b6ec-58aefc1b5b53)
 
@@ -204,8 +198,8 @@ docker run -it -e MONGO_URL="your mongo url" -p 3002:3002 be_profilesvc:latest
 ```
 Lets push the docker images to docker hub
 ```
-docker tag be_profilesvc:latest adarsh321/profile_service_adarsh:latest
-docker push adarsh321/profile_service_adarsh:latest
+docker tag be_profilesvc:latest sayanalokesh/profile_service_adarsh:latest
+docker push sayanalokesh/profile_service_sayanalokesh:latest
 ```
 
 ![image](https://github.com/AdarshIITDH/MERN-deployment-on-AKS/assets/60352729/fbe64562-b0bf-413c-9c15-c25d6f1bf263)
@@ -252,8 +246,8 @@ docker run -it -e REACT_APP_API_HELLO=http://<ec2 public ip>:3001 -e REACT_APP_A
 Now push the image to the Dockerhub
 
 ```
-docker tag fe_svc:latest adarsh321/frontend_service_adarsh:latest
-docker push adarsh321/frontend_service_adarsh:latest
+docker tag fe_svc:latest sayanalokesh/frontend_service_sayanalokesh:latest
+docker push sayanalokesh/frontend_service_adarsh:latest
 ```
 ![image](https://github.com/AdarshIITDH/MERN-deployment-on-AKS/assets/60352729/daf4cde3-3d7c-4099-a42b-d3f7899ff5b9)
 
@@ -284,7 +278,7 @@ Lets Test it
 
 Imperative approach-
 ```
-kubectl create deployment hello --image=public.ecr.aws/c3w1m1q2/hello_service_adarsh --replicas=3 --port=3001
+kubectl create deployment hello --image=public.ecr.aws/c3w1m1q2/hello_service_sayanalokesh --replicas=3 --port=3001
 ```
 Declarative approach
 ```
@@ -305,7 +299,7 @@ spec:
         app: hello
     spec:
       containers:
-      - image: adarsh321/hello_service_adarsh:latest
+      - image: adarsh321/hello_service_sayanalokesh:latest
         name: hello-microservice
         ports:
         - containerPort: 3001
@@ -372,7 +366,7 @@ spec:
     spec:
       containers:
         - name: profile-service-container
-          image: adarsh321/profile_service_adarsh:latest
+          image: sayanalokesh/profile_service_sayanalokesh:latest
           ports:
             - containerPort: 3002
           env:
@@ -414,7 +408,7 @@ spec:
     spec:
       containers:
         - name: frontend-container
-          image: adarsh321/frontend_service_adarsh:latest
+          image: sayanalokesh/frontend_service_sauanalokesh:latest
           ports:
             - containerPort: 3000  
           env:
