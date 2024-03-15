@@ -1,7 +1,5 @@
 # Azure_MERN_Deployment
 
-# MERN Microservices deployment using AKS
-
 This application has 3 microservices, 2 for the backend and 1 for the frontend.
 ```
 tree --filelimits 3 MERN_Microservices_EKS_Deployment/
