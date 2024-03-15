@@ -22,9 +22,6 @@ MERN_Microservices_EKS_Deployment/
    - 1.3 [Create the Kubernetes Cluster](#create-the-kubernetes-cluster)
 2. [Prepare the MERN Application](#prepare-the-mern-application)
    - 2.1 [Containerize the MERN Application](#containerize-the-mern-application)
-   - 2.2 [Build the docker image](#build-the-docker-image)
-
-
 
 ## Set up the Azure Environment
 
@@ -39,11 +36,6 @@ After successful installation
 
 ![image](https://github.com/AdarshIITDH/MERN-deployment-on-AKS/assets/60352729/85b452d5-3f26-497f-a432-dd371614139f)
 
-
-
-
-
-
 ### Creating the resource group
  - In the Azure Portal, click on “Create a resource” from the left-hand menu.
  - Search for “Resource group” and select “Resource group” from the results.
@@ -53,8 +45,6 @@ After successful installation
  - Click the “Review + Create” button and then click “Create” to create the resource group.
 
 ![image](https://github.com/AdarshIITDH/MERN-deployment-on-AKS/assets/60352729/12ca557c-61e3-44e1-bb72-26bc8c54735e)
-
-
 
 ### Create the Kubernetes Cluster
  - In the Azure Portal, click on “Create a resource” again.
