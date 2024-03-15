@@ -394,7 +394,7 @@ spec:
     spec:
       containers:
         - name: frontend-container
-          image: sayanalokesh/frontend_service_sauanalokesh:latest
+          image: sayanalokesh/frontend_service_sayanalokesh:latest
           ports:
             - containerPort: 3000  
           env:
