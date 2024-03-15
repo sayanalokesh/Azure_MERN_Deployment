@@ -22,7 +22,7 @@ MERN_Microservices_EKS_Deployment/
    - 1.3 [Create the Kubernetes Cluster](#create-the-kubernetes-cluster)
 2. [Prepare the MERN Application](#prepare-the-mern-application)
    - 2.1 [Containerize the MERN Application](#containerize-the-mern-application)
-   - 2.2 [Push Docker Images to docker hub](#push-docker-images-to-docker-hub)
+   - 2.2 [Build the docker image](#build-the-docker-image)
 
 
 
