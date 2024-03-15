@@ -411,4 +411,8 @@ kubectl expose deployment frontend-deployment --type=LoadBalancer --port=3000 --
 
 ![image](https://github.com/AdarshIITDH/MERN-deployment-on-AKS/assets/60352729/b6864a78-a412-4906-b77e-8a16a5d491ac)
 
-![image](https://github.com/AdarshIITDH/MERN-deployment-on-AKS/assets/60352729/72d8660c-1486-4576-ad04-c5da25e5d7c8)
+![image](https://github.com/sayanalokesh/Azure_MERN_Deployment/assets/105637305/8b093e6f-46cb-4e0c-9121-1e75aafa6895)
+
+![image](https://github.com/sayanalokesh/Azure_MERN_Deployment/assets/105637305/c70fe5fa-1963-4938-9e2a-346e158dd141)
+
+![image](https://github.com/sayanalokesh/Azure_MERN_Deployment/assets/105637305/5c7d6148-ff67-4dbf-b3bb-2063a073d2fa)
