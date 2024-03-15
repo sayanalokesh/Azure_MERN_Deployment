@@ -158,12 +158,9 @@ docker run -it -e PORT=3001 -p 3001:3001 be_hello_svc:latest
 ![image](https://github.com/AdarshIITDH/MERN-deployment-on-AKS/assets/60352729/f3259634-4106-4074-bdd0-a9cfe7ae27b7)
 
 ```
-docker tag be_hello_svc:latest adarsh321/hello_service_adarsh:latest
+docker tag be_hello_svc:latest sayanalokesh/hello_service_adarsh:latest
 docker push adarsh321/hello_service_adarsh:latest
 ```
-
-![image](https://github.com/AdarshIITDH/MERN-deployment-on-AKS/assets/60352729/ef8366e9-fd99-42f0-8412-683f05ae3c7b)
-
 
 ## Profile Microservice
 ```
@@ -201,10 +198,6 @@ Lets push the docker images to docker hub
 docker tag be_profilesvc:latest sayanalokesh/profile_service_adarsh:latest
 docker push sayanalokesh/profile_service_sayanalokesh:latest
 ```
-
-![image](https://github.com/AdarshIITDH/MERN-deployment-on-AKS/assets/60352729/fbe64562-b0bf-413c-9c15-c25d6f1bf263)
-
-
 
 # Frontend Micro Service
 
