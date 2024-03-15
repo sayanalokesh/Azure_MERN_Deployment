@@ -249,11 +249,6 @@ Now push the image to the Dockerhub
 docker tag fe_svc:latest sayanalokesh/frontend_service_sayanalokesh:latest
 docker push sayanalokesh/frontend_service_adarsh:latest
 ```
-![image](https://github.com/AdarshIITDH/MERN-deployment-on-AKS/assets/60352729/daf4cde3-3d7c-4099-a42b-d3f7899ff5b9)
-
-![image](https://github.com/AdarshIITDH/MERN-deployment-on-AKS/assets/60352729/ea48a708-de09-4427-8fb1-de34d3546b12)
-
-
 
 ## Deployment in AKS
 
@@ -269,7 +264,7 @@ az aks get-credentials --resource-group microservice_deployment --name Mern_depl
 ```
 ![image](https://github.com/AdarshIITDH/MERN-deployment-on-AKS/assets/60352729/fe9cceab-6ec3-4805-8381-f0642973b1bb)
 
-Lets Test it 
+Let's test it 
 
 ![image](https://github.com/AdarshIITDH/MERN-deployment-on-AKS/assets/60352729/3c74b5b0-303b-43f1-af92-8bd222a80881)
 ![image](https://github.com/AdarshIITDH/MERN-deployment-on-AKS/assets/60352729/669b7413-65a8-4948-bc1f-3571c499d687)
@@ -299,7 +294,7 @@ spec:
         app: hello
     spec:
       containers:
-      - image: adarsh321/hello_service_sayanalokesh:latest
+      - image: sayanalokesh/hello_service_sayanalokesh:latest
         name: hello-microservice
         ports:
         - containerPort: 3001
