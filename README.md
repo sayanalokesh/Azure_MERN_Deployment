@@ -36,8 +36,6 @@ After successful installation
 
 ![image](https://github.com/AdarshIITDH/MERN-deployment-on-AKS/assets/60352729/7c32dfb6-1dcb-462a-a03f-b17e74c14510)
 
-![image](https://github.com/AdarshIITDH/MERN-deployment-on-AKS/assets/60352729/85b452d5-3f26-497f-a432-dd371614139f)
-
 ### Creating the resource group
  - Go to the Azure Portal and click on "Create a resource" in the menu on the left.
  - Look for "Resource group" and choose it from the search results.
